@@ -26,14 +26,19 @@ void toBin(unsigned char val, char *s) {
 
 int main(void) {
 
-	unsigned char valor = 254;
+	unsigned char valor = 12, aux;
 	char str[16];
 
 	toBin(valor, str);
 
-	printf("%s", str);
+	printf("%d : %s", valor, str);
+	printf("\n");
+
+	aux = decToBcd(valor);
+	toBin(aux, str);
+
+	printf("%d : %s", aux, str);
 
 	return 0;
 
 }
-
